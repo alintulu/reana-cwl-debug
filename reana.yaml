@@ -1,0 +1,21 @@
+version: 0.4.0
+inputs:
+  files:
+    - code
+    - outputs/output-DATA-1.root 
+    - outputs/output-MC-1.root 
+  parameters:
+    input: input.yml
+workflow:
+  type: cwl
+  file: workflowReana/workflow.cwl
+outputs:
+  files:
+   - met_sumet_ratio_of_different_pt_events.pdf
+   - output-DATA-2a.root
+   - output-MC-2a.root
+   - output-DATA-2b.root
+   - output-MC-2b.root
+   - output-DATA-2c.root
+   - output-MC-2c.root
+   - jets_per_bin.pdf
