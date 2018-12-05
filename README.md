@@ -36,3 +36,24 @@ $ export REANA_WORKON=test-cwl
 $ reana-client upload
 $ reana-client start
 ```
+
+## (crude) Workflow visualised
+
+```
++----------+      +----------------+       +-------------+
+| Draw Plot|<-----| Normalize Data |       | Normalize MC|   
++----------+      +----------------+       +-------------+
+                         |                       |
+                         |                       |        
+                         v                       v 
+                  +-------------+         +------------+
+                  | Combine Data|         | Combine MC |   
+                  +-------------+         +------------+  
+                        |                        |
+                        |     +------------+     |        
+                        +---> | Theory Data|<--- +
+                        |     +------------+     |
+                        |      +------------+    |        
+                        +--->  |  Theory MC |<---+
+                               +------------+
+```
